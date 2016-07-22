@@ -1,14 +1,18 @@
 ---
 layout: default
-title: Hank Quinlan, Horrible Cop
+title: Indestructible Vinyl
 ---
-<div class="blurb">
-	<h1>Hi there, I'm Greg!</h1>
-	<p>I'm best known as the from <em>bleh</em> Don't trust me. <a href="/about">Read more about my life...</a></p>
-        <ul class="posts">
-
+<div class="posts">
+	<p class="interest">A blog about technology, coding and whatever misguided and unlikely endeavor I've decided to pursue.</p>
 	  {% for post in site.posts %}
-	    <li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+	<section class="post">
+	    <header class="post-header">
+	        <h2 class="post-title"><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
+	        <p class="post-meta"><span>{{ post.date | date_to_long_string }}</span></p>
+	    </header>
+	    <div class="post-description">
+	    {{ post.excerpt }}
+	    </div>
+	</section>
 	  {% endfor %}
-	</ul>
 </div><!-- /.blurb -->

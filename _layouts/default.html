@@ -1,29 +1,48 @@
+---
+---
 <!DOCTYPE html>
 <html>
     <head>
         <title>{{ page.title }}</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- link to main stylesheet -->
+	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
         <link rel="stylesheet" type="text/css" href="/css/main.css">
+	<!--[if lte IE 8]>
+    		<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-old-ie-min.css">
+	<![endif]-->
+	<!--[if gt IE 8]><!-->
+    		<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+	<!--<![endif]-->
     </head>
     <body>
-        <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/cv">CV</a></li>
-                <li><a href="/blog">Blog</a></li>
-            </ul>
-        </nav>
-        <div class="container">
+	<div id="layout" class="pure-g">
+		<div class="sidebar pure-u-1 pure-u-md-1-4">
+			<div class="header">
+				<img class="logo pure-img" src="images/iv_logo_vertical_alt.png"/>
+				<h2 class="brand-tagline">The Permanent Record</h2>
+		        	<nav class="nav">
+		            		<ul class="nav-list">
+		                		<li class="nav-item"><a class="pure-button" href="/">Home</a></li>
+		                		<li class="nav-item"><a class="pure-button" href="/cv">CV</a></li>
+		            		</ul>
+		        	</nav>
+			</div><!-- /.header -->
+		</div><!-- /.sidebar -->
+		<div class="content pure-u-1 pure-u-md-3-4">
+		        <div class="posts-container">
 
-            {{ content }}
+		            {{ content }}
 
-        </div><!-- /.container -->
-        <footer>
-            <ul>
-                <li><a href="mailto:hankquinlanhub@gmail.com">email</a></li>
-                <li><a href="https://github.com/hankquinlan">github.com/hankquinlan</a></li>
-            </ul>
-        </footer>
+		        </div><!-- /.posts-container -->
+		        <footer class="footer pure-menu pure-menu-horizontal">
+		            <ul>
+		                <li class="pure-menu-item"><a class="pure-menu-link" href="mailto:greg@indestructiblevinyl.com">email</a></li>
+		                <li class="pure-menu-item"><a class="pure-menu-link" href="https://twitter.com/ifndef">twitter</a></li>
+				<li class="pure-menu-item"><a class="pure-menu-link" href="https://about.me/gregrozon">about.me</a></li>
+		            </ul>
+		        </footer>
+		</div><!-- /.content -->
+	</div><!-- /#layout -->
     </body>
 </html>

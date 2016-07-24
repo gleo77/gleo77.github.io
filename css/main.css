@@ -11,6 +11,10 @@ color5: '#19B589' # green
     box-sizing: border-box;
 }
 
+body {
+    font-size: 90%;
+}
+
 a {
     text-decoration: none;
     color: {{ page.color5 }};
@@ -25,7 +29,7 @@ footer {
 }
 
 h3 {
-    font-weight: 100;
+    font-weight: 110;
 }
 
 /* LAYOUT CSS */
@@ -103,6 +107,7 @@ h3 {
 .post {
     padding-bottom: 2em;
 }
+
 .post-title {
     font-size: 2em;
     color: #222;
@@ -118,7 +123,7 @@ h3 {
     color: #444;
     line-height: 1.8em;
 }
-.post-meta {
+.post-meta, .meta {
     color: #999;
     font-size: 90%;
     margin: 0;

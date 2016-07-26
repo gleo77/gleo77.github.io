@@ -5,7 +5,7 @@ color3: '#FFAD29' # orange-yellow
 color4: '#FFEAC9' # beige
 color5: '#19B589' # green
 ---
-* {
+*, *::before, *::after {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -30,6 +30,41 @@ footer {
 
 h3 {
     font-weight: 110;
+}
+
+/* styling adapted from css-tricks.com */
+blockquote {
+  quotes: "\201C""\201D""\2018""\2019";
+  color: {{ page.color2 }};
+  font-style: italic;
+}
+blockquote:before {
+  font-family: Georgia, serif;
+  color: {{ page.color2 }};
+  content: open-quote;
+  font-size: 6em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.6em;
+}
+blockquote:after {
+  font-family: Georgia, serif;
+  color: {{ page.color2 }};
+  content: close-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-left: 95%;
+  vertical-align: -0.4em;
+}
+blockquote p {
+    padding: 0 4em 0 3em;
+    margin: 0;
+}
+/* end */
+
+figure.highlight {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
 }
 
 /* LAYOUT CSS */
@@ -176,8 +211,11 @@ h3 {
     color: {{ page.color2 }};
     font-weight: 600;
     font-style: italic;
+    font-size: larger;
     font-family: serif;
     margin-left: 1em;
+    border-bottom: 1px solid {{ page.color2 }};
+    padding-bottom: 1em;
 }
 
 .logo {

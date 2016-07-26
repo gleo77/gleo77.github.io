@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How to enable request logging while working with Jersey tests under Maven"
-date: 2016-07-16
+date: 2016-07-23
 ---
 
 I've recently been working on developing a RESTful API using [Jersey](http://jersey.java.net) and one of my very first struggles was getting it to output the HTTP headers and request/response content during testing.
